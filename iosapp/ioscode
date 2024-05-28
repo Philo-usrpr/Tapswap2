@@ -1,0 +1,31 @@
+// ViewController.swift
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+    var totalCoins = 0
+    var coinsPerTap = 1
+    var coinsPerSecond = 0
+    var energyLimit = 5000
+    var isBotMining = false
+    
+    @IBOutlet weak var coinsLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateCoinsLabel()
+    }
+    
+    @IBAction func tapButtonTapped(_ sender: UIButton) {
+        totalCoins += coinsPerTap
+        updateCoinsLabel()
+    }
+    
+    func updateCoinsLabel() {
+        coinsLabel.text = "\(totalCoins) coins"
+    }
+    
+    // Implement functions for upgrading CPT, CPS, increasing energy limit, and activating bot mining
+    // ...
+}
