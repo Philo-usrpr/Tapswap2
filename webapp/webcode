@@ -1,0 +1,49 @@
+<!— index.html —>
+
+<!DOCTYPE html>
+<html lang=“en”>
+<head>
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <title>TapSwap</title>
+    <link rel=“stylesheet” href=“styles.css”>
+</head>
+<body>
+    <div class=“container”>
+        <h1>TapSwap</h1>
+        <p>Total Coins: <span id=“totalCoins”>0</span></p>
+        <button id=“tapButton”>Tap</button>
+    </div>
+    <script src=“script.js”></script>
+</body>
+</html>
+
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+// script.js
+
+let totalCoins = 0;
+let coinsPerTap = 1;
+
+document.getElementById(“tapButton”).addEventListener(“click”, function() {
+    totalCoins += coinsPerTap;
+    document.getElementById(“totalCoins”).textContent = totalCoins;
+});
+
+// Implement functions for upgrading CPT, CPS, increasing energy limit, and activating bot mining
+// ...
